@@ -72,7 +72,7 @@ static SwapLineTerminators();
 void mexFunction( int nlhs, mxArray *plhs[], 
 		  int nrhs, const mxArray*prhs[] )
 #else
-     mexFunction(nlhs, plhs, nrhs, prhs)
+void mexFunction(nlhs, plhs, nrhs, prhs)
      int nlhs, nrhs;
      mxArray *plhs[], *prhs[];
 #endif
@@ -168,7 +168,7 @@ Boolean OpenMathLink( int nlhs, mxArray *plhs[],
 
   argc = 6;
   argv[0] = "MathLinkMex";
-  argv[1] = "-linkname";      argv[2] = "math -mathlink";
+  argv[1] = "-linkname";      argv[2] = "MathKernel -mathlink";
   argv[3] = "-linkmode";      argv[4] = "Launch";
   argv[5] = "-linkprotocol";  argv[6] = "Pipes";
 
